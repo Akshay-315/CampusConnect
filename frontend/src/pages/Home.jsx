@@ -19,20 +19,9 @@ const Home = () => {
             Hello, <span className="font-semibold text-blue-600">{user?.name}</span>!
           </p>
         ) : (
-          <div className="space-x-4">
-            <Link
-              to="/login"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Login
-            </Link>
-            <Link
-              to="/register"
-              className="inline-block bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition-colors"
-            >
-              Register
-            </Link>
-          </div>
+          <p className="text-lg text-gray-700">
+            Welcome! Please log in to access all features.
+          </p>
         )}
       </div>
 

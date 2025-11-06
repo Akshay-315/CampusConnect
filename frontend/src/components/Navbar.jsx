@@ -92,7 +92,7 @@ const Navbar = () => {
               </>
             ) : (
               <Link
-                to="/login"
+                to="/auth"
                 className="flex items-center space-x-2 text-gray-600 hover:text-blue-600"
               >
                 <FaSignInAlt className="text-xl" />
