@@ -1,0 +1,24 @@
+{
+  "name": "campusconnect",
+  "version": "1.0.0",
+  "description": "CampusConnect - Smart College Forum Platform",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "seed": "cd backend && node seed.js",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "campus",
+    "forum",
+    "college",
+    "education"
+  ],
+  "author": "Akshay-315",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
