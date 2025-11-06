@@ -5,8 +5,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import { SocketProvider } from './context/SocketContext';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Auth from './pages/Auth';
 import Official from './pages/Official';
 import Student from './pages/Student';
 import Anonymous from './pages/Anonymous';
@@ -28,7 +27,7 @@ const ProtectedRoute = ({ children, adminOnly = false }) => {
   }
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/auth" />;
   }
 
   if (adminOnly && !isAdmin) {
@@ -47,8 +46,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
-                <Route path="login" element={<Login />} />
-                <Route path="register" element={<Register />} />
+                <Route path="auth" element={<Auth />} />
                 <Route path="official" element={<Official />} />
                 <Route path="student" element={<Student />} />
                 <Route path="anonymous" element={<Anonymous />} />
