@@ -1,4 +1,4 @@
-import { FaThumbsUp, FaComment, FaCheckCircle, FaExclamationTriangle, FaPin } from 'react-icons/fa';
+import { FaThumbsUp, FaComment, FaCheckCircle, FaExclamationTriangle, FaThumbtack } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { postsAPI } from '../services/api';
 import { useAuth } from '../context/AuthContext';
@@ -90,7 +90,7 @@ const PostCard = ({ post, onUpdate }) => {
               {post.category}
             </span>
             {post.isPinned && (
-              <FaPin className="text-blue-600" title="Pinned" />
+              <FaThumbtack className="text-blue-600" title="Pinned" />
             )}
             {post.isVerified && (
               <FaCheckCircle className="text-green-600" title="Verified" />
